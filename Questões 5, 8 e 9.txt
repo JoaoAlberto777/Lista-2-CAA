@@ -1,0 +1,73 @@
+Questão 5 Analise os algoritmos abaixo de maneira mais justa possível. Definir o custo dos laços em termos de n:
+
+Analisando o codigo 1 é possivel notar que temos dois loops alinhados, onde o loop(i) executa (n) vezes, e cada vez que esse loop executa o segundo loop (j) tambem executa (n) vezes, tendo assim o numero de operações igual a n x n = n^2, sendo de complexidade O(n^2).
+
+
+Analisando o codigo 2, vemos que o loop (i) começa igual a 1 e a cada execução dobra sou valor, tendo o numero de operações igual a (log2 n), e ainda para cada vez que o loop (i) executa o loop (j) faz n execuções, sendo assim o numero total de operações igual a log2 n x n = n log2 n. Complexidade de O(n log n).
+
+Analisando o codigo 3 o loop (i) agora começa em 0 porem ainda dobra seu valor, porem o loop(j) passa a incrementar em i em vez de 1, tendo como numero de interações do loop 2 n/i. O numero total de operações vai ser n + n/2 + n/4 + ... = n x (1 + 1/2 + 1/4 + ...) sendo uma soma infinita, com complexidade O(n).
+
+
+--------------------------------------------------------------------------
+
+
+Questão 8 (Algoritmos não-recursivos) Determine a função de complexidade (no pior e melhor caso e no caso médio), das funções implementadas em Python, apresentadas abaixo, fazendo as consideraçõespertinentes.
+
+Algoritmo Bubble Sort 1: 
+Algoritmo bubble sort padrão, sendo:
+Pior caso onde o array esteja ordenado ao contrario, ira fazer O(n^2) comparações e trocas.
+Melhor caso onde o array já esteja ordenado, porem ainda tera que percorrer o array n vezes, sendo assim o medio caso sera O(n^2) tambem.
+
+Algoritmo Bubble Sort 2:
+Variação do Bubble sort sendo
+Pior caso ainda O(n^2) pois se o array estiver invertido age como o buuble sort padrão.
+Melhor caso onde o array já esteja ordenado, pois fara O(n) comparações e nenhuma troca.
+Medio caso ainda permanece O(n^2) como no bubble sort padrão
+
+Algoritmo "Alguma coisa :|" :
+
+Alguma coisa 1:
+Loop (i): Executa n vezes.
+
+Loop (j): Para cada valor de i, executa n*(n-1)/2 - i vezes.
+
+Loop (k): Para cada combinação de i e j, executa j*(j+1)/2 vezes
+Alguma coisa 2:
+Loop (i):Contribui com um fator n
+
+Segundo Loop (for j): Contribui com um fator n tambem pois vai ate n -1
+
+Terceiro Loop (for k): Contribui tambem com um fator n, pois esse loop vai até j e j pode ser n -1. 
+
+
+Esses algoritmos tem 3 loops alinhados, devido a isso temos:
+Pior, medio e melhor caso iguais a O()n^3 pois todos os loops contribuem com o fator n, e ao muiplicar esses fatores temos O(n^3).
+
+
+----------------------------------------------------------------------------
+
+
+Questão 9 (Algoritmos recursivos) Determine a função de complexidade, das funções recursivas apresentadas
+abaixo, fazendo as considerações que considerar pertinente.
+
+Pesquisa1:
+Pior Caso: Irá ocorrer quando a função for chamada de forma recursiva n vezes, oque acaba gerando uma complexidade cubica de O(n^3)
+Melhor Caso: Ocorre qua n <= 1, oque resulta em um custo constante
+
+Pesquisa2:
+Pior Caso: Quando a função for chamada de forma recursiva para n elementos, gerauma complexidade logaritmica com base 2 O(n log n)
+Melhor Caso: permanece igual a pesquisa 1
+
+Pesquisa3:
+Pior Caso: Quando a função é chamada de forma recursiva para n elementos,  gera uma complexidade logaritmica com base 3 O(log3 n)
+Melhor Caso: permanece igual a pesquisa 1 e 2
+
+
+Enigmas 1 e 2:
+Analisando como um todo vemos que o engima 2 é uma variação do quick sort, no pior caso tera complexidade O(n^2).
+Medio e melhor caso terá complexidade O(n log n).
+
+
+
+
+
